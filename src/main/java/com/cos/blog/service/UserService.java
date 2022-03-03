@@ -45,11 +45,14 @@ public class UserService {
 		});
 		
 		if(persistance.getOauth()==null || persistance.getOauth().equals("")) {
-			String rawPassword= user.getPassword();
-			String encPassword = encoder.encode(rawPassword);
-			persistance.setPassword(encPassword);
-			persistance.setEmail(user.getEmail());
+				String rawPassword= user.getPassword();
+				String encPassword = encoder.encode(rawPassword);
+				persistance.setPassword(encPassword);
+				persistance.setEmail(user.getEmail());
 		}
+		
+		
+		
 	}
 	
 }

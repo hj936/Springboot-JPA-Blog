@@ -12,6 +12,7 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,6 +31,7 @@ public class User {
 	
 	@Column(nullable=false, length=100, unique=true)
 	private String username;
+	
 	
 	@Column(nullable=false,length=100)
 	private String password;
