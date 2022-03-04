@@ -20,7 +20,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
 		<a class="navbar-brand" href="/">Home</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
@@ -29,12 +29,15 @@
 			<c:choose>
 				<c:when test="${empty principal }">
 					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="/auth/token">시세조회</a></li>
 						<li class="nav-item"><a class="nav-link" href="/auth/loginForm">로그인</a></li>
 						<li class="nav-item"><a class="nav-link" href="/auth/joinForm">회원가입</a></li>
 					</ul>
 				</c:when>
 				<c:otherwise>
 					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="/auth/token">시세조회</a></li>
+						<li class="nav-item"><a class="nav-link" href="/account">보유 자산 조회</a></li>
 						<li class="nav-item"><a class="nav-link" href="/board/saveForm">글쓰기</a></li>
 						<li class="nav-item"><a class="nav-link" href="/user/updateForm">회원정보</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
@@ -46,4 +49,8 @@
 
 		</div>
 	</nav>
+</body>
 	<br />
+	<br/>
+<br/>
+<br/>

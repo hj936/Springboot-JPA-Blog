@@ -38,6 +38,17 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	@GetMapping("/auth/token")
+	public String token() {
+		return "/token";
+	}
+	
+	@GetMapping("/account")
+	public String account() {
+		return "/account";
+	}
+	
+	
 	@GetMapping("/auth/joinForm")
 	public String joinForm() {
 		return "user/joinForm";
